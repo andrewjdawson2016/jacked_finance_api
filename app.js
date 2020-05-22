@@ -55,4 +55,12 @@ app.get('/', function (req, res) {
   res.json(models)
 })
 
+app.get('/hello', function (req, res) {
+  res.json({"hello": "world"})
+})
+
+app.get('/world', function (req, res) {
+  res.json({"world": "hello"})
+})
+
 app.listen(app.get('port'), () => console.log('Node app is running on port', app.get('port')));
